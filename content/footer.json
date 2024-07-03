@@ -1,0 +1,55 @@
+{
+	"acknowledgments": [
+		{ 
+			"person": "Yvan Tanke - Tech Sales Professional",
+			"link": "https://www.linkedin.com/in/yvan-tanke-577394144/",
+			"note": "Best tech sale with a high prospecting and researching skills."
+		},
+		{ 
+			"person": "Iwomi Technologies ltd - Fintech Company",
+			"link": "https://www.iwomitechnologies.com/iwomitech/en/",
+			"note": "Cameroonian Fintech's Role in Africa's Financial Inclusion"
+		},
+		{ 
+			"person": "ThinkMarkets - online trading services",
+			"link": "https://www.thinkmarkets.com/en",
+			"note": "Multi-awarded provider of online trading services."
+		},
+		{ 
+			"person": "Vercel - Platform",
+			"link": "https://vercel.com/docs",
+			"note": "Host your own Next.js project for free!"
+		}
+	],
+
+	"links": [
+		{ 
+			"person": "Molutorinfo Blog",
+			"link": "https://infodoccmr.blogspot.com/",
+			"note": "Trends technology and forex trading tips."
+		}
+	],
+
+	"social": [
+		{
+			"url": "https://medium.com/@dibrilnzangmene",
+			"icon": "medium"
+		},
+		{
+			"url": "https://dev.to/g87code",
+			"icon": "dev"
+		},
+		{
+			"url": "https://www.linkedin.com/in/nzangmene-dit-dibril-hassan/",
+			"icon": "linkedin"
+		},
+		{
+			"url": "https://github.com/G87git",
+			"icon": "github"
+		},
+		{
+			"url": "https://x.com/G87Code",
+			"icon": "tiwtter"
+		}
+	]
+}
