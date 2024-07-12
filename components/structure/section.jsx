@@ -12,10 +12,10 @@ import sections from '../../styles/structure/section.module.scss';
  */
 export default function Section({ classProp, children }) {
 
-	const _class = classProp ? classProp : '';
+	const _className = classProp ? classProp : '';
 
 	return (
-		<div className={`${sections.default} ${_class}`}>
+		<div className={`${sections.default} ${_className}`}>
 			{children}
 		</div>
 	);
