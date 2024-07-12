@@ -1,30 +1,30 @@
 module.exports = {
 	reactStrictMode: true,
-	// env: {
-	// 	dir: '/',
-	// },
+	env: {
+		dir: '/',
+	},
 	images: {
 		remotePatterns: [
-			// {
-			// 	protocol: 'https',
-			// 	hostname: '**.vercel.app',
-			// 	pathname: '/api/**'
-			// },
-			// {
-			// 	protocol: 'https',
-			// 	hostname: '**.vercel.app',
-			// 	pathname: '?app=portfolio-theme-jqe0jhmif-atlamors.vercel.app'
-			// },
-			// {
-			// 	protocol: 'https',
-			// 	hostname: '**.shields.io',
-			// 	pathname: '/badge/**'
-			// },
-			// {
-			// 	protocol: 'https',
-			// 	hostname: '**.shields.io',
-			// 	pathname: '/github/**'
-			// },
+			{
+				protocol: 'https',
+				hostname: '**.vercel.app',
+				pathname: '/api/**'
+			},
+			{
+				protocol: 'https',
+				hostname: '**.vercel.app',
+				pathname: 'ditnzangmene-ldmnede8j-g87gits-projects.vercel.app'
+			},
+			{
+				protocol: 'https',
+				hostname: '**.shields.io',
+				pathname: '/badge/**'
+			},
+			{
+				protocol: 'https',
+				hostname: '**.shields.io',
+				pathname: '/github/**'
+			},
 			{
 				protocol: 'https',
 				hostname: '**.githubusercontent.com',
