@@ -1,52 +1,40 @@
-
-<div align="center">
-  <h1>dibrilnzangmene | portfolio</h1>
-</div>
-
-
+# DibrilNzangmene | Portfolio
 
 ## Updates
-#### Dev Update — July 6th, 2023 🥰
-We have relocated to a beautiful home in the suburbs of Langely, BC. There has been a LOT of work unpacking, organizing, and landscaping to get this home perfect for our two toddlers! I am hoping to resume development of the theme in the next couple months!
 
-On a really interesting note, Webflow has launched a React component export tool. I am considering moving all component design and management over to Webflow for easier tooling for marketing teams and visual designers! 
-#### Dev Update — Feb 13th, 2023 [Updated: March 05th, 2023]
-Jest has been setup, but no progress on building tests has been made. Life is busy atm! 
-#### Dev Update — Feb 10th, 2023
-I am currently taking a short break in development of this theme. I am in the final phases of a job search, and getting ready to move into a bigger place to give some much needed room to my growing family! I am hoping to continue development before the end of next quarter!
+### Dev Update — July 6th, 2023 🥰
+I've immigrated to the UK as a skilled worker and now live in Birmingham. After much unpacking and settling in with my toddlers, I'm aiming to resume theme development in a few months. Webflow's new React component export tool is intriguing, and I might shift component design and management there for easier use by marketing teams and visual designers.
 
-## This website is still being developed! 🥳
-The porftofolio application has currently hit the Beta phase and is ready to be forked if you are familiar with React and Next. The next release cycle will focus on a better DX—moving from local JSON to MongoDB, setting up Sanity for GUI page editing, Unit Testing with Jest, adding TypeScript, etc.
+### Dev Update — Feb 13th, 2023 [Updated: March 05th, 2023]
+Jest is set up, but I haven't started building tests due to a busy schedule.
 
-#### Next & App Architecure
-- [ ] Next.js v13 : Waiting for /app/ folder to leave beta
-- [ ] Sanity.io
+### Dev Update — Feb 10th, 2023
+I'm taking a short break from theme development as I finalize a job search and prepare to move to a larger home for my growing family. I hope to continue development by the end of next quarter.
 
-#### App Architecure & Design Systems
-- [ ] App\Systems\Margins : Continuing to develop Design Token System
-- [ ] App\Systems\Padding : Continuing to develop Design Token System
+## Website Development Progress 🥳
+The portfolio app is in the Beta phase and ready for forking if you're familiar with React and Next.js. The next release will focus on improving developer experience by transitioning from local JSON to MongoDB, setting up Sanity for GUI page editing, adding unit testing with Jest, incorporating TypeScript, and more.
 
-#### Pages
-- [x] Pages\About
-- [ ] Pages\Case Studies
-- [x] Pages\Articles : API options and connections for Dev.to and HackerNoon not complete
-- [x] Pages\Projects : Single project details page
+### Next & App Architecture
+- Next.js v13: Awaiting /app/ folder to exit beta
+- Sanity.io integration
 
-#### Articles Page
-- [x] Pages\Articles\Medium\API
-- [ ] Pages\Articles\Dev.to\API
-- [ ] Pages\Articles\HackerNoon\API
+### App Architecture & Design Systems
+- Developing Design Token System for margins
+- Developing Design Token System for padding
 
-#### Projects Page
-- [ ] Pages\Projects\Project : Single project details page
+### Pages
+- [x] About
+- [ ] Case Studies
+- [x] Articles: API connections for Dev.to and HackerNoon are incomplete
+- [x] Projects: Single project details page
 
+### Articles Page
+- [x] Medium API
+- [ ] Dev.to API
+- [ ] HackerNoon API
 
-## Please fork this repo! 🦄
+### Projects Page
+- [ ] Single project details page
 
-Fork, Install, Editing, and Deploy instructions coming soon(ish)!
-
-This is my first open-source contribution, and it was also a great oppoortunity for me to learn! 
-
-It is my hope that by sharing this project it can give others a chance to enjoy learning Nextjs (and have as much fun as I did), and hopefully brings value to people as a portfolio and networking tool!
-
-
+## Fork This Repo! 🦄
+Fork, install, edit, and deploy instructions coming soon! This is my first open-source contribution, offering a chance for others to enjoy learning Next.js and using this as a portfolio and networking tool.
