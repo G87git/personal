@@ -75,7 +75,7 @@ export default function Hero() {
 					</button>
 					<button
 						className={`button ${button.secondary} leaveSite`}
-						onClick={() => window.open('/resume.pdf', '_blank')}
+						onClick={() => window.open('/Resume.pdf', '_blank')}
 					>
 						{content.buttons.secondary.title}
 					</button>
