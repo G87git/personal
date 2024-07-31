@@ -1,20 +1,19 @@
-import { useState } 		from 'react';
-import { TypeAnimation } 	from 'react-type-animation';
+import { useState } from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
-import Section 		from '../../structure/section';
-import Container 	from '../../structure/container';
+import Section from '../../structure/section';
+import Container from '../../structure/container';
 
-import space		from '../../utils/spacing.util';
+import space from '../../utils/spacing.util';
 
-import Icon 		from '../../utils/icon.util'
+import Icon from '../../utils/icon.util';
 
-import HeroBg		from '../../blocks/hero.bg/bg-color-1';
+import HeroBg from '../../blocks/hero.bg/bg-color-1';
 
-import hero 		from '../../../styles/sections/index/hero.module.scss';
-import button 		from '../../../styles/blocks/button.module.scss';
+import hero from '../../../styles/sections/index/hero.module.scss';
+import button from '../../../styles/blocks/button.module.scss';
 
-import content		from '../../../content/index/hero.json'
-
+import content from '../../../content/index/hero.json';
 
 /**
  * TO DO LIST
@@ -27,22 +26,30 @@ import content		from '../../../content/index/hero.json'
  */
 
 export default function Hero() {
-
 	const [typingStatus, setTypingStatus] = useState('Initializing');
 
 	return (
 		<Section classProp={`${hero.section}`}>
 			<Container spacing={'VerticalXXXL'}>
-				<TypeAnimation className={`${hero.preHeader}`}
+				<TypeAnimation
+					className={`${hero.preHeader}`}
 					sequence={[
 						content.intro.startDelay,
-						() => { setTypingStatus('typing') },
+						() => {
+							setTypingStatus('typing');
+						},
 						content.intro.start,
-						() => {	setTypingStatus('typed') },
+						() => {
+							setTypingStatus('typed');
+						},
 						content.intro.deleteDelay,
-						() => {	setTypingStatus('deleting') },
+						() => {
+							setTypingStatus('deleting');
+						},
 						content.intro.end,
-						() => {	setTypingStatus('deleted') },
+						() => {
+							setTypingStatus('deleted');
+						},
 						content.intro.restartDelay,
 					]}
 					speed={content.intro.speed}
@@ -51,30 +58,30 @@ export default function Hero() {
 					repeat={Infinity}
 				/>
 				<section>
-					<h1 className={hero.header}>
-						{content.header.name}
-						</h1>
-					<h1 className={`${hero.header} ${hero.primaryDim}`}>
-						{content.header.usp}
-					</h1>
+					<h1 className={hero.header}>{content.header.name}</h1>
+					<h1 className={`${hero.header} ${hero.primaryDim}`}>{content.header.usp}</h1>
 				</section>
 				<section>
-					<p className={`${hero.primaryBright} subtitle ${space(["verticalLrg"])}`}>
-						{ content.paragraph }
-					</p>					
+					<p className={`${hero.primaryBright} subtitle ${space(['verticalLrg'])}`}>
+						{content.paragraph}
+					</p>
 				</section>
 				<section>
-					<button	className={`button ${button.primary}`}
-							onClick={ () => window.location = 'mailto:ditdibril@gmail.com' } >
+					<button
+						className={`button ${button.primary}`}
+						onClick={() => (window.location = 'mailto:ditdibril@gmail.com')}
+					>
 						{content.buttons.primary.title}
 					</button>
-					<button className={`button ${button.secondary} leaveSite`} 
-							onClick={() => window.location.href='/resume.pdf'}>
+					<button
+						className={`button ${button.secondary} leaveSite`}
+						onClick={() => window.open('/resume.pdf', '_blank')}
+					>
 						{content.buttons.secondary.title}
 					</button>
 				</section>
 			</Container>
 			<HeroBg theme="bg-color-1" />
 		</Section>
-	)
+	);
 }
