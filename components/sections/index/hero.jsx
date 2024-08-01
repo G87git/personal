@@ -14,6 +14,7 @@ import hero from '../../../styles/sections/index/hero.module.scss';
 import button from '../../../styles/blocks/button.module.scss';
 
 import content from '../../../content/index/hero.json';
+import Link from 'next/link';
 
 /**
  * TO DO LIST
@@ -73,12 +74,17 @@ export default function Hero() {
 					>
 						{content.buttons.primary.title}
 					</button>
-					<button
-						className={`button ${button.secondary} leaveSite`}
-						onClick={() => window.open('/Resume.pdf', '_blank')}
+					<Link
+						href={'/Dibril-Nzangmene-Resume.pdf'}
+						target='_blank'
+						alt="MyCV"
+						rel='nooper noreferrer'
 					>
-						{content.buttons.secondary.title}
-					</button>
+						<button
+							className={`button ${button.secondary}`}>
+							{content.buttons.secondary.title}
+						</button>
+					</Link>
 				</section>
 			</Container>
 			<HeroBg theme="bg-color-1" />
