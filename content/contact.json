@@ -1,0 +1,26 @@
+{
+    "title": "Get in Touch",
+    "fields": [
+        {
+            "id": "name",
+            "label": "Your Name",
+            "type": "text",
+            "placeholder": "Enter your name"
+        },
+        {
+            "id": "email",
+            "label": "Your Email",
+            "type": "email",
+            "placeholder": "Enter your email address"
+        },
+        {
+            "id": "message",
+            "label": "Your Message",
+            "type": "textarea",
+            "placeholder": "Enter your message"
+        }
+    ],
+    "submitButton": "Send Message",
+    "successMessage": "Your message has been sent successfully!",
+    "errorMessage": "Something went wrong. Please try again later."
+}

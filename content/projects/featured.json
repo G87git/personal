@@ -5,23 +5,70 @@
 		"repo": "Private",
 		"descriptionTitle": "Online Student Registration System (OSRS)",
 		"description": "SCHOL-IN: user-friendly, efficient, reduces admin burdens, minimizes errors, seamless experience.",
-		"imageOptions": [
-		],
+		"imageOptions": [],
 		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "350", "w": "556", "url": "/img/MacBook-Pro.png" }		
-			],
+			{
+				"key": "mock-stack",
+				"hover": "right",
+				"url": "/img/MacBook-Pro.png"
+			}
+		],
 		"stack": [
-			{ "key": "php", 		"name": "PHP", 			"type": "devicon" },
-			{ "key": "mysql", 		"name": "mySQL", 		"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "jquery", 		"name": "jQuery", 		"type": "devicon" },
-			{ "key": "xampp", 		"name": "Xampp", 		"type": "devicon" },
-			{ "key": "wordpress",	"name": "Wordpress", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" },
-			{ "key": "google",		"name": "GA4/GTM/EEC", 	"type": "devicon" }
+			{
+				"key": "php",
+				"name": "PHP",
+				"type": "devicon"
+			},
+			{
+				"key": "mysql",
+				"name": "mySQL",
+				"type": "devicon"
+			},
+			{
+				"key": "javascript",
+				"name": "JavaScript",
+				"type": "devicon"
+			},
+			{
+				"key": "jquery",
+				"name": "jQuery",
+				"type": "devicon"
+			},
+			{
+				"key": "xampp",
+				"name": "Xampp",
+				"type": "devicon"
+			},
+			{
+				"key": "wordpress",
+				"name": "Wordpress",
+				"type": "devicon"
+			},
+			{
+				"key": "html5",
+				"name": "HTML5",
+				"type": "devicon"
+			},
+			{
+				"key": "css3",
+				"name": "CSS3",
+				"type": "devicon"
+			},
+			{
+				"key": "sass",
+				"name": "SCSS",
+				"type": "devicon"
+			},
+			{
+				"key": "git",
+				"name": "Git(Hub)",
+				"type": "devicon"
+			},
+			{
+				"key": "google",
+				"name": "GA4/GTM/EEC",
+				"type": "devicon"
+			}
 		]
 	},
 	{
@@ -31,21 +78,116 @@
 		"descriptionTitle": "An open source portfolio",
 		"description": "built on Next.js and React. A fast and agile MERN stack single page application.",
 		"imageOptions": [
-			{ "key": "size", 		"value": "large" }
+			{
+				"key": "size",
+				"value": "large"
+			}
 		],
 		"images": [
-			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/portfolio-mobile.svg" }
+			{
+				"key": "portfolio",
+				"hover": "left",
+				"url": "/img/portfolio-mobile.svg"
+			}
 		],
 		"stack": [
-			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
-			{ "key": "react", 		"name": "React", 		"type": "devicon" },
-			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
-			{ "key": "mongodb", 	"name": "MongoDB", 		"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
+			{
+				"key": "nextjs",
+				"name": "Next.js",
+				"type": "devicon"
+			},
+			{
+				"key": "react",
+				"name": "React",
+				"type": "devicon"
+			},
+			{
+				"key": "nodejs",
+				"name": "Node.js",
+				"type": "devicon"
+			},
+			{
+				"key": "mongodb",
+				"name": "MongoDB",
+				"type": "devicon"
+			},
+			{
+				"key": "javascript",
+				"name": "JavaScript",
+				"type": "devicon"
+			},
+			{
+				"key": "html5",
+				"name": "HTML5",
+				"type": "devicon"
+			},
+			{
+				"key": "css3",
+				"name": "CSS3",
+				"type": "devicon"
+			},
+			{
+				"key": "sass",
+				"name": "SCSS",
+				"type": "devicon"
+			},
+			{
+				"key": "git",
+				"name": "Git(Hub)",
+				"type": "devicon"
+			}
+		]
+	},
+	{
+		"project": "Tidynestcleaning",
+		"url": "https://www.tidynestcleaning.co.uk/home",
+		"repo": "Public",
+		"descriptionTitle": "TidyNest Cleaning Services Website",
+		"description": "​Created a responsive website for TidyNest Cleaning Services, featuring an intuitive booking interface and service showcase",
+		"imageOptions": [],
+		"images": [
+			{
+				"key": "tidynest",
+				"hover": "right",
+				"url": "/img/tdnii.png"
+			}
+		],
+		"stack": [
+			{
+				"key": "react",
+				"name": "React",
+				"type": "devicon"
+			},
+			{
+				"key": "scss",
+				"name": "SCSS",
+				"type": "devicon"
+			},
+			{
+				"key": "css3",
+				"name": "CSS3",
+				"type": "devicon"
+			},
+			{
+				"key": "html5",
+				"name": "HTML5",
+				"type": "devicon"
+			},
+			{
+				"key": "javascript",
+				"name": "JavaScript",
+				"type": "devicon"
+			},
+			{
+				"key": "git",
+				"name": "Git(Hub)",
+				"type": "devicon"
+			},
+			{
+				"key": "emailjs",
+				"name": "EmailJS",
+				"type": "devicon"
+			}
 		]
 	}
 ]

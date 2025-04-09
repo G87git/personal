@@ -65,16 +65,33 @@ export default function FeaturedProject({ content }, index) {
 
                 <div className={css.imageContainer}>
                     <span className={`${css.imageAnimationContainer}`}>
-                        {images.map(({ key, url, hover, h, w }, index) => {
-                            const hoverVariant = (hover === 'left') ? hoverLeft : hoverRight
+                        {images.map(({ key, url, hover}, index) => {
+                            const hoverVariant = (hover === 'left') ? hoverLeft : hoverRight;
                             return (
-                                <m.div key={`${index}-${key}`} variants={item}>
-                                    <m.div variants={hoverVariant}>
-                                        <Image src={url} alt="project image" height={h} width={w} />
+                                <m.div
+                                    key={`${index}-${key}`}
+                                    variants={item}
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        position: 'relative',
+                                        overflow: 'hidden',
+                                    }}
+                                >
+                                    <m.div variants={hoverVariant} style={{ width: '80%', height: '80%' }}>
+                                        <Image
+                                            src={url}
+                                            alt="project image"
+                                            fill
+                                            style={{
+                                                objectFit: 'fit'
+                                            }}
+                                        />
                                     </m.div>
                                 </m.div>
-                            )
+                            );
                         })}
+
                     </span>
                 </div>
             </m.section>

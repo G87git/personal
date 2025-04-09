@@ -40,7 +40,8 @@ export default function About() {
 						<Image
 						src={AboutImage}
 						alt='MyProfileImage'
-						placeholder='My profile image'
+						  placeholder="blur"
+  blurDataURL="/_next/static/media/logo-blur.jpg"
 						/>
 					</div>
 					<div className={about.copy} >

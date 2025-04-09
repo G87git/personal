@@ -39,7 +39,7 @@ export default function Hero() {
 						() => {
 							setTypingStatus('typing');
 						},
-						content.intro.start,
+						content.intro.start, 
 						() => {
 							setTypingStatus('typed');
 						},
@@ -70,15 +70,15 @@ export default function Hero() {
 				<section>
 					<button
 						className={`button ${button.primary}`}
-						onClick={() => (window.location = 'mailto:ditdibril@gmail.com')}
+						onClick={() => window.open('mailto:ditdibril@gmail.com', '_blank')}
 					>
 						{content.buttons.primary.title}
 					</button>
 					<Link
-						href={'/Dibril-Nzangmene-Resume.pdf'}
-						target='_blank'
-						alt="MyCV"
-						rel='nooper noreferrer'
+						href="/DIBRILNZANGMENECV.pdf"
+						download="DibrilNzangmeneCV.pdf"
+						target={'_blank'}
+						rel="noopener noreferrer"
 					>
 						<button
 							className={`button ${button.secondary}`}>

@@ -73,7 +73,7 @@ export default function Footer() {
 				</section>
 				<section className={css.github}>
 					<a href={settings.portfolio.repo_html} rel="noreferrer" target="_blank">
-						<h5>{settings.portfolio.forkthis}</h5>
+						<h5>{settings.portfolio.forkthis} {new Date().getFullYear()} 😎</h5>
 						<ul>
 							<li>
 								<p><Icon icon={[ 'fad', 'code-branch' ]} /> Forks: { gitHubInfo.forks }</p>

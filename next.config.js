@@ -1,3 +1,4 @@
+// next.config.js
 module.exports = {
 	reactStrictMode: true,
 	env: {
@@ -35,14 +36,11 @@ module.exports = {
 				hostname: '**.medium.com',
 				pathname: '/**'
 			},
+			// Add any other hostnames you need
 		],
 	},
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
+	
 }
-
-const nextConfig ={
-    eslint:{
-        ignoreDuringBuilds:true,
-    }
-}
-
-module.exports = nextConfig
