@@ -8,9 +8,19 @@
 		"imageOptions": [],
 		"images": [
 			{
-				"key": "mock-stack",
+				"key": "mock-stack-1",
 				"hover": "right",
 				"url": "/img/MacBook-Pro.png"
+			},
+			{
+				"key": "mock-stack-2",
+				"hover": "left",
+				"url": "/img/featured-mysupplyco.png"
+			},
+			{
+				"key": "mock-stack-3",
+				"hover": "right",
+				"url": "/img/iPad-Pro.svg"
 			}
 		],
 		"stack": [
@@ -85,9 +95,14 @@
 		],
 		"images": [
 			{
-				"key": "portfolio",
+				"key": "portfolio-1",
 				"hover": "left",
 				"url": "/img/portfolio-mobile.svg"
+			},
+			{
+				"key": "portfolio-2",
+				"hover": "right",
+				"url": "/img/MacBook-Pro.png"
 			}
 		],
 		"stack": [
@@ -147,9 +162,14 @@
 		"imageOptions": [],
 		"images": [
 			{
-				"key": "tidynest",
+				"key": "tidynest-1",
 				"hover": "right",
 				"url": "/img/tdnii.png"
+			},
+			{
+				"key": "tidynest-2",
+				"hover": "left",
+				"url": "/img/iPad-Pro.svg"
 			}
 		],
 		"stack": [

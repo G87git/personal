@@ -1,0 +1,131 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carouselTrack {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carouselSlide {
+  flex: 0 0 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+// Navigation buttons removed
+
+.carouselDots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+  }
+}
+
+.activeDot {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .carouselDots {
+    bottom: 12px;
+  }
+  
+  .dot {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .carouselButton {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    
+    &:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
+  }
+  
+  .dot {
+    background: rgba(0, 0, 0, 0.5);
+    
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+  
+  .activeDot {
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+
+// Animation for smooth slide transitions
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.carouselSlide {
+  animation: slideIn 0.6s ease-out;
+}
+
+// Hover effects for the entire carousel
+.carousel {
+  &:hover {
+    .imageWrapper {
+      // Additional hover effects can be added here
+    }
+  }
+}

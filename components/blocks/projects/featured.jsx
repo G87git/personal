@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { m, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 import { useRouter } from 'next/router'
+import ImageCarousel from './carousel'
 
 import Badges from '../../utils/badge.list.util'
 import Icon from '../../utils/icon.util'
@@ -64,35 +65,11 @@ export default function FeaturedProject({ content }, index) {
                 </div>
 
                 <div className={css.imageContainer}>
-                    <span className={`${css.imageAnimationContainer}`}>
-                        {images.map(({ key, url, hover}, index) => {
-                            const hoverVariant = (hover === 'left') ? hoverLeft : hoverRight;
-                            return (
-                                <m.div
-                                    key={`${index}-${key}`}
-                                    variants={item}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        position: 'relative',
-                                        overflow: 'hidden',
-                                    }}
-                                >
-                                    <m.div variants={hoverVariant} style={{ width: '80%', height: '80%' }}>
-                                        <Image
-                                            src={url}
-                                            alt="project image"
-                                            fill
-                                            style={{
-                                                objectFit: 'fit'
-                                            }}
-                                        />
-                                    </m.div>
-                                </m.div>
-                            );
-                        })}
-
-                    </span>
+                    <ImageCarousel 
+                        images={images} 
+                        autoSlide={true} 
+                        slideInterval={4000} 
+                    />
                 </div>
             </m.section>
         </a>
@@ -113,15 +90,25 @@ const container = {
         }
     },
     rest: {
+        scale: 1,
+        y: 0,
         transition: {
+            type: "spring",
+            stiffness: 300,
+            damping: 30,
             delayChildren: 0,
             staggerChildren: 0,
         }
     },
     hover: {
+        scale: 1.02,
+        y: -8,
         transition: {
-            delayChildren: 0,
-            staggerChildren: 0,
+            type: "spring",
+            stiffness: 400,
+            damping: 25,
+            delayChildren: 0.1,
+            staggerChildren: 0.05,
         }
     }
 }
@@ -149,18 +136,46 @@ const item = {
 
 const hoverLeft = {
     rest: {
-        x: 0
+        x: 0,
+        // scale: 1,
+        // rotate: 0,
+        transition: {
+            type: "spring",
+            stiffness: 300,
+            damping: 30
+        }
     },
     hover: {
-        x: -20
+        // x: -15,
+        // scale: 1.05,
+        // rotate: -2,
+        transition: {
+            type: "spring",
+            stiffness: 400,
+            damping: 25
+        }
     }
 }
 
 const hoverRight = {
     rest: {
-        x: 0
+        x: 0,
+        // scale: 1,
+        // rotate: 0,
+        transition: {
+            type: "spring",
+            stiffness: 300,
+            damping: 30
+        }
     },
     hover: {
-        x: 20
+        // x: 15,
+        // scale: 1.05,
+        // rotate: 2,
+        transition: {
+            type: "spring",
+            stiffness: 400,
+            damping: 25
+        }
     }
 }
