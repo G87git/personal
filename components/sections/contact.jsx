@@ -51,7 +51,7 @@
 // 		setStatus('Sending...');
 
 // 		try {
-// 			const response = await fetch('/api/contact', {
+// 			const response = await fetch('https://dibrilnzangmene.vercel.app/api/contact', {
 // 				method: 'POST',
 // 				headers: { 'Content-Type': 'application/json' },
 // 				body: JSON.stringify(formData),
@@ -154,7 +154,7 @@ export default function Contact() {
 		setLoading(true); // Start loading
 
 		try {
-			const response = await fetch('/api/contact', {
+			const response = await fetch('https://dibrilnzangmene.vercel.app/api/contact', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(formData),

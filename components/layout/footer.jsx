@@ -36,13 +36,17 @@ export default function Footer() {
 						<li><h4>Acknowledgments</h4></li>
 						{
 						content.acknowledgments.map( ({ person, link, note }, index) => {
-							return (
-								<li key={index}>
+						return (
+							<li key={index}>
+								{link ? (
 									<a href={link} rel="noreferrer" target="_blank">{person} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></a>
-									<p>{note}</p>
-								</li>
-							)
-						})
+								) : (
+									<span style={{cursor: 'default'}}>{person}</span>
+								)}
+								<p>{note}</p>
+							</li>
+						)
+					})
 						}
 					</ul>
 					<ul className={css.links}>
