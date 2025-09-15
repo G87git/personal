@@ -8,15 +8,23 @@ import sections from '../../styles/structure/section.module.scss';
  * ¯¯¯¯¯¯¯¯         
  * @param {string}	classProp template literals of classes for contain
  * @param {jsx} 	children children elements
+ * @param {string}	as semantic HTML element type (section, article, main, aside, etc.)
+ * @param {string}	id unique identifier for the section
+ * @param {string}	ariaLabel accessibility label for screen readers
  * @returns {jsx}	<Section />
  */
-export default function Section({ classProp, children }) {
+export default function Section({ classProp, children, as = 'section', id, ariaLabel }) {
 
 	const _className = classProp ? classProp : '';
+	const Element = as;
 
 	return (
-		<div className={`${sections.default} ${_className}`}>
+		<Element 
+			className={`${sections.default} ${_className}`}
+			id={id}
+			aria-label={ariaLabel}
+		>
 			{children}
-		</div>
+		</Element>
 	);
 }

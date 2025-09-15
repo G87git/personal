@@ -30,62 +30,68 @@ export default function Hero() {
 	const [typingStatus, setTypingStatus] = useState('Initializing');
 
 	return (
-		<Section classProp={`${hero.section}`}>
-			<Container spacing={'VerticalXXXL'}>
-				<TypeAnimation
-					className={`${hero.preHeader}`}
-					sequence={[
-						content.intro.startDelay,
-						() => {
-							setTypingStatus('typing');
-						},
-						content.intro.start, 
-						() => {
-							setTypingStatus('typed');
-						},
-						content.intro.deleteDelay,
-						() => {
-							setTypingStatus('deleting');
-						},
-						content.intro.end,
-						() => {
-							setTypingStatus('deleted');
-						},
-						content.intro.restartDelay,
-					]}
-					speed={content.intro.speed}
-					deletionSpeed={content.intro.deletionSpeed}
-					wrapper={content.intro.wrapper}
-					repeat={Infinity}
-				/>
-				<section>
-					<h1 className={hero.header}>{content.header.name}</h1>
-					<h1 className={`${hero.header} ${hero.primaryDim}`}>{content.header.usp}</h1>
-				</section>
-				<section>
-					<p className={`${hero.primaryBright} subtitle ${space(['verticalLrg'])}`}>
-						{content.paragraph}
-					</p>
-				</section>
-				<section>
-					<button
-						className={`button ${button.primary}`}
-						onClick={() => window.open('mailto:ditdibril@gmail.com', '_blank')}
-					>
-						{content.buttons.primary.title}
-					</button>
-					<Link
-						href="/DIBRILNZANGMENECV.pdf"
-						download="DibrilNzangmeneCV.pdf"
-						target={'_blank'}
-						rel="noopener noreferrer"
-					>
+			<Section classProp={`${hero.section}`} as="main" id="hero" ariaLabel="Hero section with introduction">
+				<Container spacing={'VerticalXXXL'}>
+					<TypeAnimation
+						className={`${hero.preHeader}`}
+						sequence={[
+							content.intro.startDelay,
+							() => {
+								setTypingStatus('typing');
+							},
+							content.intro.start, 
+							() => {
+								setTypingStatus('typed');
+							},
+							content.intro.deleteDelay,
+							() => {
+								setTypingStatus('deleting');
+							},
+							content.intro.end,
+							() => {
+								setTypingStatus('deleted');
+							},
+							content.intro.restartDelay,
+						]}
+						speed={content.intro.speed}
+						deletionSpeed={content.intro.deletionSpeed}
+						wrapper={content.intro.wrapper}
+						repeat={Infinity}
+						aria-live="polite"
+					/>
+					<header>
+						<h1 className={hero.header}>{content.header.name}</h1>
+						<p className={`${hero.header} ${hero.primaryDim}`} role="doc-subtitle">{content.header.usp}</p>
+					</header>
+					<section aria-labelledby="hero-description">
+						<p id="hero-description" className={`${hero.primaryBright} subtitle ${space(['verticalLrg'])}`}>
+							{content.paragraph}
+						</p>
+					</section>
+					<section aria-labelledby="hero-actions">
+						<h2 id="hero-actions" className="sr-only">Contact Actions</h2>
 						<button
-							className={`button ${button.secondary}`}>
-							{content.buttons.secondary.title}
+							className={`button ${button.primary}`}
+							onClick={() => window.open('mailto:ditdibril@gmail.com', '_blank')}
+							aria-label="Send email to Dibril Nzangmene"
+						>
+							{content.buttons.primary.title}
 						</button>
-					</Link>
-				</section>
+						<Link
+							href="/DIBRILNZANGMENECV.pdf"
+							download="DibrilNzangmeneCV.pdf"
+							target={'_blank'}
+							rel="noopener noreferrer"
+							aria-label="Download Dibril Nzangmene's resume as PDF"
+						>
+							<button
+								className={`button ${button.secondary}`}
+								tabIndex={-1}
+							>
+								{content.buttons.secondary.title}
+							</button>
+						</Link>
+					</section>
 			</Container>
 			<HeroBg theme="bg-color-1" />
 		</Section>

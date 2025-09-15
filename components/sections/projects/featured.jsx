@@ -14,19 +14,24 @@ import content 		from '../../../content/projects/featured.json'
 export default function FeaturedProjects() {
 
 	return (
-		<Section classProp={css.hasBg}>	
+		<Section classProp={css.hasBg} id="featured-projects" ariaLabel="Featured web and mobile projects showcase">	
 			<Container spacing={'verticalXXXXLrg'}>
 				<SectionTitle
 					title="Featured Projects"
 					preTitle="Web and Mobile"
 					subTitle="Focused on the experience, driven by the engineering."
-				/> 				{
-				content.map( (data, index) => {
-					return (
-						<FeaturedProject content={data} index={index} key={index} />
-					)
-				})
-				}
+					headingLevel="h2"
+					id="featured-projects-title"
+				/>
+				<section aria-labelledby="featured-projects-title">
+					{
+					content.map( (data, index) => {
+						return (
+							<FeaturedProject content={data} index={index} key={index} />
+						)
+					})
+					}
+				</section>
 			</Container>
 			<div className={css.bgContainer}>
 				<span className={css.orbitalBg}>

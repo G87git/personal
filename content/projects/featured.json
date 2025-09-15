@@ -10,17 +10,23 @@
 			{
 				"key": "mock-stack-1",
 				"hover": "right",
-				"url": "/img/MacBook-Pro.png"
+				"url": "/img/MacBook-Pro.png",
+				"alt": "SCHOL-IN online student registration system displayed on MacBook Pro mockup",
+				"title": "SCHOL-IN Desktop View"
 			},
 			{
 				"key": "mock-stack-2",
 				"hover": "left",
-				"url": "/img/featured-mysupplyco.png"
+				"url": "/img/featured-mysupplyco.png",
+				"alt": "SCHOL-IN user interface showing student registration features and dashboard",
+				"title": "SCHOL-IN Interface"
 			},
 			{
 				"key": "mock-stack-3",
 				"hover": "right",
-				"url": "/img/iPad-Pro.svg"
+				"url": "/img/iPad-Pro.svg",
+				"alt": "SCHOL-IN responsive design displayed on iPad Pro showing mobile compatibility",
+				"title": "SCHOL-IN Mobile View"
 			}
 		],
 		"stack": [
@@ -97,12 +103,16 @@
 			{
 				"key": "portfolio-1",
 				"hover": "left",
-				"url": "/img/portfolio-mobile.svg"
+				"url": "/img/portfolio-mobile.svg",
+				"alt": "Portfolio website mobile responsive design showing modern UI components",
+				"title": "Portfolio Mobile Design"
 			},
 			{
 				"key": "portfolio-2",
 				"hover": "right",
-				"url": "/img/MacBook-Pro.png"
+				"url": "/img/MacBook-Pro.png",
+				"alt": "Portfolio website desktop version displayed on MacBook Pro showing full layout",
+				"title": "Portfolio Desktop View"
 			}
 		],
 		"stack": [
@@ -164,12 +174,23 @@
 			{
 				"key": "tidynest-1",
 				"hover": "right",
-				"url": "/img/tdnii.png"
+				"url": "/img/projects/3/a.png",
+				"alt": "TidyNest Cleaning Services website homepage showing hero section and service overview",
+				"title": "TidyNest Homepage"
 			},
 			{
 				"key": "tidynest-2",
 				"hover": "left",
-				"url": "/img/iPad-Pro.svg"
+				"url": "/img/projects/3/b.png",
+				"alt": "TidyNest booking interface displaying service selection and scheduling options",
+				"title": "TidyNest Booking System"
+			},
+			{
+				"key": "tidynest-3",
+				"hover": "right",
+				"url": "/img/projects/3/c.png",
+				"alt": "TidyNest services page showcasing different cleaning packages and pricing",
+				"title": "TidyNest Services"
 			}
 		],
 		"stack": [

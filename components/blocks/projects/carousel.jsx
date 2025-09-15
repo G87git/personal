@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { m } from 'framer-motion';
+import OptimizedImage from '../../utils/optimized-image.util';
 import css from '../../../styles/sections/projects/carousel.module.scss';
 
 export default function ImageCarousel({ images, autoSlide = true, slideInterval = 4000 }) {
@@ -56,9 +56,9 @@ export default function ImageCarousel({ images, autoSlide = true, slideInterval 
                                     whileHover="hover"
                                     custom={hoverDirection}
                                 >
-                                    <Image
+                                    <OptimizedImage
                                         src={image.url}
-                                        alt={`Project image ${index + 1}`}
+                                        alt={image.alt || `${image.title || 'Project'} screenshot ${index + 1}`}
                                         fill
                                         priority={index === 0}
                                         quality={90}

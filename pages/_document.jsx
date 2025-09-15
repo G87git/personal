@@ -10,48 +10,16 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head>
-                {/* Primary Meta Tags */}
+                {/* Global Meta Tags */}
                 <meta charSet="UTF-8" />
-                {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
-                {/* <title name="title" content="Dibril Nzangmene - Web Developer & Writer" ></title> */}
-                <meta name="title" content="Dibril Nzangmene - Web Developer & Writer" />
-                <meta name="description" content="Portfolio of Dibril Nzangmene, showcasing web development and technical writing projects." />
-                <meta name="keywords" content="web developer, technical writer, portfolio, freelance, programming, Dibril Nzangmene" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="author" content="Dibril Nzangmene" />
-
-                {/* Open Graph / Facebook */}
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://dibrilnzangmene.com" />
-                <meta property="og:title" content="Dibril Nzangmene - Web Developer & Writer" />
-                <meta property="og:description" content="Portfolio of Dibril Nzangmene, showcasing web development and technical writing projects." />
-                <meta property="og:image" content="https://dibrilnzangmene.com/og-image.jpg" />
-
-                {/* Twitter */}
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://dibrilnzangmene.com" />
-                <meta property="twitter:title" content="Dibril Nzangmene - Web Developer & Writer" />
-                <meta property="twitter:description" content="Portfolio of Dibril Nzangmene, showcasing web development and technical writing projects." />
-                <meta property="twitter:image" content="https://dibrilnzangmene.com/twitter-image.jpg" />
-
-                {/* Structured Data (JSON-LD) */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Person",
-                            "name": "Dibril Nzangmene",
-                            "url": "https://dibrilnzangmene.com",
-                            "sameAs": [
-                                "https://www.linkedin.com/in/dibrilnzangmene/",
-                                "https://github.com/dibrilnzangmene/",
-                                "https://twitter.com/dibrilnzangmene/"
-                            ],
-                            "jobTitle": "Web Developer & Technical Writer",
-                            "description": "Portfolio of Dibril Nzangmene, showcasing web development and technical writing projects."
-                        }),
-                    }}
-                />
+                <meta name="generator" content="Next.js" />
+                
+                {/* DNS Prefetch for performance */}
+                <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+                <link rel="dns-prefetch" href="//api.github.com" />
+                <link rel="dns-prefetch" href="//medium.com" />
 
                 {/* Favicon */}
                 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />

@@ -1,5 +1,5 @@
 // Core packages
-import Image from 'next/image';
+import OptimizedImage from '../../utils/optimized-image.util';
 
 // Section structure
 import Section from '../../structure/section';
@@ -28,20 +28,25 @@ import AboutImage from '../../../public/img/logo.jpeg';
  */
 export default function About() {
 	return (
-		<Section classProp={about.section}>	
+		<Section classProp={about.section} id="about" ariaLabel="About Dibril Nzangmene section">	
 			<Container spacing={['verticalXXXLrg']}>
 				<SectionTitle
 					title="About Me"
 					preTitle="Synopsis"
 					subTitle="As an experienced and innovative web developer with a focus on fintech, I specialize in PHP, WordPress, and JavaScript. My skill set includes SEO-focused web design and development, and I have a proven track record of delivering high-quality websites and web applications."
+					headingLevel="h2"
+					id="about-me"
 				/>
-				<section className={about.content}>
+				<section className={about.content} aria-labelledby="about-me">
 					<div className={about.image}>
-						<Image
-						src={AboutImage}
-						alt='MyProfileImage'
-						  placeholder="blur"
-  blurDataURL="/_next/static/media/logo-blur.jpg"
+						<OptimizedImage
+							src={AboutImage}
+							alt="Dibril Nzangmene - Web Developer and Technical Writer profile photo"
+							placeholder="blur"
+							blurDataURL="/_next/static/media/logo-blur.jpg"
+							priority={false}
+							quality={85}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
 						/>
 					</div>
 					<div className={about.copy} >

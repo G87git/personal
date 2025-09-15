@@ -3,6 +3,7 @@ import GitRecentProjects from '../../components/sections/projects/recent'
 import FeaturedProjects from '../../components/sections/projects/featured'
 
 import Color  from '../../components/utils/page.colors.util'
+import SEO, { generateStructuredData } from '../../components/utils/seo.util'
 
 import settings from '../../content/_settings.json'
 import colors from '../../content/projects/_colors.json'
@@ -11,9 +12,17 @@ import colors from '../../content/projects/_colors.json'
 export default function Projects({ user, repos }) {
 	return (
 		<>
-		<Color colors={colors} />
-		<FeaturedProjects />
-		<GitRecentProjects user={user} repos={repos} />
+			<SEO 
+				title="Projects - Dibril Nzangmene | Web Development Portfolio"
+				description="Explore my web development projects including React applications, Next.js websites, and full-stack solutions. View live demos and source code."
+				keywords="web development projects, React projects, Next.js portfolio, JavaScript applications, full-stack development, Dibril Nzangmene projects"
+				canonical="/projects"
+				ogImage="/img/og-projects.jpg"
+				structuredData={generateStructuredData.projects()}
+			/>
+			<Color colors={colors} />
+			<FeaturedProjects />
+			<GitRecentProjects user={user} repos={repos} />
 		</>
 	)
 }

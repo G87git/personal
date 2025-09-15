@@ -1,0 +1,104 @@
+<svg width="1024" height="576" viewBox="0 0 1024 576" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3742fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5f27cd;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="towelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ddd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f2f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1024" height="576" fill="url(#heroGradient)"/>
+  
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="1024" height="60" fill="#2f3542" opacity="0.8"/>
+  <text x="130" y="35" font-family="Arial, sans-serif" font-size="12" fill="white">© Birmingham UK</text>
+  <text x="750" y="25" font-family="Arial, sans-serif" font-size="12" fill="white">Support</text>
+  <text x="820" y="25" font-family="Arial, sans-serif" font-size="12" fill="white">Terms & Conditions</text>
+  <text x="900" y="35" font-family="Arial, sans-serif" font-size="12" fill="white">English ▼</text>
+  
+  <!-- Main Header -->
+  <rect x="0" y="60" width="1024" height="80" fill="white"/>
+  
+  <!-- Logo -->
+  <g transform="translate(130, 75)">
+    <rect x="0" y="0" width="50" height="50" rx="25" fill="#ff6b6b"/>
+    <text x="75" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#333">tidynest</text>
+    <text x="75" y="50" font-family="Arial, sans-serif" font-size="12" fill="#666">CLEANING SERVICES</text>
+  </g>
+  
+  <!-- Navigation -->
+  <g transform="translate(400, 90)">
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#333">Home</text>
+    <text x="80" y="20" font-family="Arial, sans-serif" font-size="16" fill="#333">About</text>
+    <text x="150" y="20" font-family="Arial, sans-serif" font-size="16" fill="#333">Pricing</text>
+    <text x="230" y="20" font-family="Arial, sans-serif" font-size="16" fill="#333">Contact</text>
+  </g>
+  
+  <!-- Call Button -->
+  <rect x="720" y="75" width="180" height="50" rx="25" fill="#ff6b6b"/>
+  <text x="800" y="95" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Get Free Estimate</text>
+  <text x="800" y="110" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">+44 07958569110</text>
+  
+  <!-- Hero Content -->
+  <g transform="translate(80, 200)">
+    <!-- Left Side Text -->
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">Professional Cleaning</text>
+    <text x="0" y="60" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">for a Spotless</text>
+    <text x="0" y="120" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">Experience</text>
+    
+    <text x="0" y="180" font-family="Arial, sans-serif" font-size="16" fill="white" opacity="0.9">At TidyNest Cleaning Service, we ensure</text>
+    <text x="0" y="200" font-family="Arial, sans-serif" font-size="16" fill="white" opacity="0.9">your Airbnb or short-term rental is always</text>
+    <text x="0" y="220" font-family="Arial, sans-serif" font-size="16" fill="white" opacity="0.9">guest-ready. Trust us to create a</text>
+    <text x="0" y="240" font-family="Arial, sans-serif" font-size="16" fill="white" opacity="0.9">welcoming environment that leaves lasting</text>
+    <text x="0" y="260" font-family="Arial, sans-serif" font-size="16" fill="white" opacity="0.9">impressions.</text>
+    
+    <!-- CTA Button -->
+    <rect x="0" y="300" width="180" height="50" rx="25" fill="#ff6b6b"/>
+    <text x="90" y="330" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">▶ Discover More</text>
+  </g>
+  
+  <!-- Right Side - Towel Stack Illustration -->
+  <g transform="translate(600, 180)">
+    <!-- Stack of towels -->
+    <ellipse cx="200" cy="300" rx="180" ry="40" fill="url(#towelGradient)" opacity="0.3"/>
+    
+    <!-- Towel 1 (bottom) -->
+    <rect x="50" y="250" width="300" height="60" rx="30" fill="url(#towelGradient)"/>
+    <rect x="60" y="260" width="280" height="40" rx="20" fill="white" opacity="0.8"/>
+    
+    <!-- Towel 2 (middle) -->
+    <rect x="70" y="220" width="260" height="50" rx="25" fill="url(#towelGradient)"/>
+    <rect x="80" y="230" width="240" height="30" rx="15" fill="white" opacity="0.8"/>
+    
+    <!-- Towel 3 (top) -->
+    <rect x="90" y="190" width="220" height="40" rx="20" fill="url(#towelGradient)"/>
+    <rect x="100" y="200" width="200" height="20" rx="10" fill="white" opacity="0.8"/>
+    
+    <!-- Texture lines -->
+    <g stroke="#bbb" stroke-width="1" opacity="0.5">
+      <line x1="70" y1="270" x2="330" y2="270"/>
+      <line x1="70" y1="280" x2="330" y2="280"/>
+      <line x1="70" y1="290" x2="330" y2="290"/>
+      
+      <line x1="90" y1="240" x2="310" y2="240"/>
+      <line x1="90" y1="250" x2="310" y2="250"/>
+      
+      <line x1="110" y1="205" x2="290" y2="205"/>
+    </g>
+  </g>
+  
+  <!-- Navigation Arrows -->
+  <circle cx="50" cy="350" r="25" fill="#ff6b6b" opacity="0.8"/>
+  <path d="M45 350 L55 345 L55 355 Z" fill="white"/>
+  
+  <circle cx="974" cy="350" r="25" fill="#ff6b6b" opacity="0.8"/>
+  <path d="M979 350 L969 345 L969 355 Z" fill="white"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="950" cy="500" r="35" fill="#fdcb6e" opacity="0.8"/>
+  <circle cx="80" cy="500" r="20" fill="#00b894" opacity="0.6"/>
+</svg>

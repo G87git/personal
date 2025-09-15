@@ -131,13 +131,20 @@ export default function Navbar() {
 	}
 
 	return (
-		<nav id="Navbar" className={css.container}>
+		<nav id="Navbar" className={css.container} role="navigation" aria-label="Main navigation">
 			<ul className={css.menu}>
 				<li className={css.menuHeader}>
-					<Link className={css.logo} href="/"  >
+					<Link className={css.logo} href="/" aria-label="Go to homepage">
 						{settings.name}
 					</Link>
-					<button onClick={toggleMenu} className={css.mobileToggle} data-open={menuState}>
+					<button 
+						onClick={toggleMenu} 
+						className={css.mobileToggle} 
+						data-open={menuState}
+						aria-expanded={menuState}
+						aria-controls="mobile-menu"
+						aria-label={menuState ? 'Close navigation menu' : 'Open navigation menu'}
+					>
 						<div>
 							<span></span>
 							<span></span>
@@ -145,23 +152,28 @@ export default function Navbar() {
 					</button>
 				</li>
 				<li data-open={menuState} className={css.menuContent}>
-					<ul>
+					<ul id="mobile-menu" role="menu">
 						{
 						content.map( ({ url, title }, index) => {
 							return (
-								<li key={index}>
-									<Link href={url}>{title}</Link>
+								<li key={index} role="none">
+									<Link href={url} role="menuitem">{title}</Link>
 								</li>
 							)
 						})	
 						}
-						<li>
+						<li role="none">
 							<ThemeMode />
 						</li>
 					</ul>
 				</li>
 			</ul>
-			<span onClick={toggleMenu} className={css.menuBlackout} data-open={menuState}></span>
+			<span 
+				onClick={toggleMenu} 
+				className={css.menuBlackout} 
+				data-open={menuState}
+				aria-hidden="true"
+			></span>
 		</nav>
 	)
 }

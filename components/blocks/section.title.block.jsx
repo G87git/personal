@@ -7,18 +7,23 @@ import section from '../../styles/blocks/section.title.module.scss'
 /**
  * Section header component
  * 
- * @param {string} * strings for header
- * @returns 
+ * @param {string} preTitle - Pre-title text
+ * @param {string} title - Main section title
+ * @param {string} subTitle - Subtitle/description
+ * @param {string} headingLevel - Heading level (h2, h3, h4, etc.)
+ * @param {string} id - Unique identifier for the section
+ * @returns JSX element
  */
-export default function SectionTitle({ preTitle, title, subTitle }) {
+export default function SectionTitle({ preTitle, title, subTitle, headingLevel = 'h2', id }) {
+	const HeadingTag = headingLevel;
+	const sectionId = id || title?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+	
 	return (
-		<>
-		<div className={`${section.title}`}>
-			<h4>{preTitle}</h4>
-			<h2>{title}</h2>
-			<p className="subtitle">{subTitle}</p>
-		</div>
-		</>
+		<header className={`${section.title}`}>
+			{preTitle && <p className="section-pretitle" aria-label="Section category">{preTitle}</p>}
+			<HeadingTag id={sectionId}>{title}</HeadingTag>
+			{subTitle && <p className="subtitle" aria-describedby={sectionId}>{subTitle}</p>}
+		</header>
 	)
 
 }

@@ -1,0 +1,75 @@
+<svg width="1024" height="576" viewBox="0 0 1024 576" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1024" height="576" fill="#f8f9fa"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1024" height="80" fill="white"/>
+  
+  <!-- Logo -->
+  <g transform="translate(130, 15)">
+    <rect x="0" y="0" width="50" height="50" rx="25" fill="#ff6b6b"/>
+    <text x="75" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#333">tidynest</text>
+    <text x="75" y="50" font-family="Arial, sans-serif" font-size="12" fill="#666">CLEANING SERVICES</text>
+  </g>
+  
+  <!-- Navigation -->
+  <g transform="translate(400, 30)">
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" fill="#333">Home</text>
+    <text x="80" y="20" font-family="Arial, sans-serif" font-size="16" fill="#333">About</text>
+    <text x="150" y="20" font-family="Arial, sans-serif" font-size="16" fill="#333">Pricing</text>
+    <text x="230" y="20" font-family="Arial, sans-serif" font-size="16" fill="#333">Contact</text>
+  </g>
+  
+  <!-- Call Button -->
+  <rect x="720" y="15" width="180" height="50" rx="25" fill="#ff6b6b"/>
+  <text x="800" y="35" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Get Free Estimate</text>
+  <text x="800" y="50" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">+44 07958569110</text>
+  
+  <!-- Main Title -->
+  <text x="512" y="140" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#2c3e50" text-anchor="middle">Our Projects</text>
+  <text x="512" y="170" font-family="Arial, sans-serif" font-size="16" fill="#666" text-anchor="middle">It was popularised in the with the release desktop publishing</text>
+  <text x="512" y="190" font-family="Arial, sans-serif" font-size="16" fill="#666" text-anchor="middle">software like versions.</text>
+  
+  <!-- Project Gallery -->
+  <g transform="translate(16, 220)">
+    <!-- Project 1 - Bathroom -->
+    <rect x="0" y="0" width="240" height="180" rx="8" fill="#e9ecef"/>
+    <rect x="10" y="10" width="220" height="160" rx="4" fill="#dee2e6"/>
+    <text x="120" y="95" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">Bathroom Cleaning</text>
+    
+    <!-- Project 2 - Living Room -->
+    <rect x="256" y="0" width="240" height="180" rx="8" fill="#e9ecef"/>
+    <rect x="266" y="10" width="220" height="160" rx="4" fill="#dee2e6"/>
+    <text x="376" y="95" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">Living Room</text>
+    
+    <!-- Project 3 - Kitchen -->
+    <rect x="512" y="0" width="240" height="180" rx="8" fill="#e9ecef"/>
+    <rect x="522" y="10" width="220" height="160" rx="4" fill="#dee2e6"/>
+    <text x="632" y="95" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">Kitchen Cleaning</text>
+    
+    <!-- Project 4 - Living Room Cleaning -->
+    <rect x="768" y="0" width="240" height="180" rx="8" fill="#e9ecef"/>
+    <rect x="778" y="10" width="220" height="160" rx="4" fill="#ffeaa7"/>
+    <text x="888" y="85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2d3436" text-anchor="middle">Living Room Cleaning</text>
+    <text x="888" y="105" font-family="Arial, sans-serif" font-size="12" fill="#636e72" text-anchor="middle">Birmingham, UK</text>
+    <circle cx="968" cy="30" r="15" fill="#00b894"/>
+    <text x="968" y="35" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">+</text>
+  </g>
+  
+  <!-- Navigation Dots -->
+  <g transform="translate(480, 450)">
+    <circle cx="0" cy="0" r="6" fill="#74b9ff"/>
+    <circle cx="24" cy="0" r="6" fill="#ff7675"/>
+    <circle cx="48" cy="0" r="6" fill="#ddd"/>
+  </g>
+  
+  <!-- Arrow Navigation -->
+  <circle cx="450" cy="450" r="20" fill="#74b9ff"/>
+  <path d="M445 450 L455 445 L455 455 Z" fill="white"/>
+  
+  <circle cx="574" cy="450" r="20" fill="#ff7675"/>
+  <path d="M579 450 L569 445 L569 455 Z" fill="white"/>
+  
+  <!-- Yellow Circle Decoration -->
+  <circle cx="950" cy="500" r="30" fill="#fdcb6e"/>
+</svg>

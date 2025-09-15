@@ -1,5 +1,5 @@
 // Core packages
-import Image from 'next/image';
+import OptimizedImage from '../../utils/optimized-image.util';
 
 // Section structure
 import Section from '../../structure/section';
@@ -25,14 +25,16 @@ import about from '../../../styles/sections/index/about.module.scss';
  */
 export default function Technical() {
 	return (
-		<Section classProp={`${about.section} borderBottom`}>	
+		<Section classProp={`${about.section} borderBottom`} id="technical" ariaLabel="Technical skills and expertise section">	
 			<Container spacing={['verticalXXXLrg']}>
 				<SectionTitle
 					title="Technical"
 					preTitle="Hard Skills"
 					subTitle="As an experienced Web Developer, I create impactful digital experiences using a wide range of technologies and tools."
+					headingLevel="h2"
+					id="technical-skills"
 				/>
-				<section className={`${about.content} ${about.container}`}>
+				<section className={`${about.content} ${about.container}`} aria-labelledby="technical-skills">
 					<div className={about.copy}>
 						<CopyBlock 
 							title="Technical Expertise"
@@ -63,7 +65,15 @@ export default function Technical() {
 						/>							
 					</div>
 					<div className={`${about.image} ${about.technicalSvg}`}>
-						<Image src="/img/dataism-24.svg" width={477} height={1111} alt="Data Strings 01 by Colorpong: https://ywft.us/2177b695b" />
+						<OptimizedImage 
+							src="/img/dataism-24.svg" 
+							width={477} 
+							height={1111} 
+							alt="Abstract data visualization artwork representing technical expertise and programming concepts"
+							priority={false}
+							quality={90}
+							sizes="(max-width: 768px) 100vw, 477px"
+						/>
 					</div>
 				</section>	
 			</Container>
