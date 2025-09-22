@@ -27,47 +27,52 @@ export default function Projects({ user, repos }) {
 	)
 }
 
-// This gets called on every request
-export async function getServerSideProps({ res }) {
+// This gets called at build time
+export async function getStaticProps() {
+	try {
+		const [ gitUserRes, gitReposRes] = await Promise.all( [
+			fetch(`https://api.github.com/users/${settings.username.github}`),
+			fetch(`https://api.github.com/users/${settings.username.github}/repos`),
+		] )
+		
+		let [ user, repos] = await Promise.all( [
+			gitUserRes.json(),
+			gitReposRes.json(), 
+		] )
 
-	res.setHeader(
-		'Cache-Control',
-		'public, s-maxage=600, stale-while-revalidate=59'
-	)
+		if (user.login) {
+			user = [user].map( 
+				({ login, name, avatar_url, html_url }) => ({ login, name, avatar_url, html_url })
+			)
+		}
+		
+		if (repos.length) {
+			repos = repos.map( 
+				({ name, fork, description, forks_count, html_url, language, watchers, default_branch, homepage, pushed_at, topics }) => {
+					const timestamp = Math.floor(new Date(pushed_at) / 1000)
+					return ({ name, fork, description, forks_count, html_url, language, watchers, default_branch, homepage, timestamp, topics, pushed_at })
+				}
+			)
 
-	const [ gitUserRes, gitReposRes] = await Promise.all( [
-		fetch(`https://api.github.com/users/${settings.username.github}`),
-		fetch(`https://api.github.com/users/${settings.username.github}/repos`),
-	] )
-	
-	let [ user, repos] = await Promise.all( [
-		gitUserRes.json(),
-		gitReposRes.json(), 
-	] )
+			repos.sort( (a, b) => b.timestamp - a.timestamp )
 
-	if (user.login) {
-		user = [user].map( 
-			({ login, name, avatar_url, html_url }) => ({ login, name, avatar_url, html_url })
-		)
-	}
-	
-	if (repos.length) {
-		repos = repos.map( 
-			({ name, fork, description, forks_count, html_url, language, watchers, default_branch, homepage, pushed_at, topics }) => {
-				const timestamp = Math.floor(new Date(pushed_at) / 1000)
-				return ({ name, fork, description, forks_count, html_url, language, watchers, default_branch, homepage, timestamp, topics, pushed_at })
+			repos = repos.filter( (e, i) => {
+				if ( i < 8 && ! e.topics.includes('github-config')) return e
+				return false
+			})
+		}
+
+		if (!repos || !user) { 
+			return { 
+				props: { repos: [], user: [] }
 			}
-		)
+		}
 
-		repos.sort( (a, b) => b.timestamp - a.timestamp )
-
-		repos = repos.filter( (e, i) => {
-			if ( i < 8 && ! e.topics.includes('github-config')) return e
-			return false
-		})
+		return { props: { repos, user } }
+	} catch (error) {
+		console.error('Error fetching GitHub data:', error)
+		return {
+			props: { repos: [], user: [] }
+		}
 	}
-
-	if (!repos || !user) { return { notFound: true,	} }
-
-	return { props: { repos, user } }
 }

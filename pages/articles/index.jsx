@@ -24,16 +24,20 @@ export default function Articles({ mediumArticles }) {
     )
 }
 
-// This gets called on every request
-export async function getServerSideProps({ res }) {
-    res.setHeader(
-        'Cache-Control',
-        'public, s-maxage=600, stale-while-revalidate=59'
-    )
+// This gets called at build time
+export async function getStaticProps() {
+    try {
+        const username = settings.username.medium
+        const mediumRSS = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${username}`)
+        const mediumArticles = await mediumRSS.json()
 
-    const username = settings.username.medium
-    const mediumRSS = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${username}`)
-    const mediumArticles = await mediumRSS.json()
-
-    return { props: { mediumArticles } }
+        return { 
+            props: { mediumArticles }
+        }
+    } catch (error) {
+        console.error('Error fetching Medium articles:', error)
+        return {
+            props: { mediumArticles: { items: [] } }
+        }
+    }
 }

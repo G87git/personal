@@ -1,10 +1,12 @@
 // next.config.js
 module.exports = {
 	reactStrictMode: true,
+	output: 'export',
 	env: {
 		dir: '/',
 	},
 	images: {
+		unoptimized: true,
 		remotePatterns: [
 			{
 				protocol: 'https',
@@ -42,5 +44,7 @@ module.exports = {
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
+
+
 	
 }
